@@ -16,14 +16,16 @@ export class RecipeService {
      'This is a simple test2', 
      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Recipe-575434.svg/702px-Recipe-575434.svg.png',
       [new Ingredient('Buns',2), new Ingredient('Meat', 2)])
-  
   ];
 
-  
-  getRecipes(){
+
+  getRecipes() {
     return this.recipes.slice();  //slice -> get a copy
   }
 
+  getRecipe(index: number) {
+    return this.recipes[index];
+  }
 
   constructor(private shoppinglistService: ShoppingListService){ }
 
